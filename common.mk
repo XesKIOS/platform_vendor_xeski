@@ -28,6 +28,11 @@ PRODUCT_PROPERTY_OVERRIDES += persist.sys.dun.override=0
 PRODUCT_COPY_FILES += \
     vendor/xeski/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip
 
+# SuperSU
+PRODUCT_COPY_FILES += \
+    vendor/xeski/prebuilt/common/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
+    vendor/xeski/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
+
 # init.d support
 PRODUCT_COPY_FILES += \
     vendor/xeski/prebuilt/common/bin/sysinit:system/bin/sysinit \
