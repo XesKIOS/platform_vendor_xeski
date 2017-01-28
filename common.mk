@@ -181,4 +181,7 @@ XESKI_VER := $(XESKI_BUILD_TYPE)
 XESKI_VERSION := XesKiOS-$(ANDROID_VERSION)-$(shell date +%Y%m%d)-$(XESKI_VER)
 XESKI_MOD_VERSION := XesKiOS-$(ANDROID_VERSION)-$(shell date +%Y%m%d)-$(XESKI_VER)
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    BUILD_DISPLAY_ID=$(BUILD_ID)
+
 $(call inherit-product-if-exists, vendor/extra/product.mk)
