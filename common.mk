@@ -176,12 +176,14 @@ ifneq ($(TARGET_UNOFFICIAL_BUILD_ID),)
     XESKI_BUILD_TYPE := $(TARGET_UNOFFICIAL_BUILD_ID)
 endif
 XESKI_VER := $(XESKI_BUILD_TYPE)
+XESKI_VERSION_NUMBER := 1.0
 
 # Set all versions
 XESKI_VERSION := XesKiOS-$(ANDROID_VERSION)-$(shell date +%Y%m%d)-$(XESKI_VER)
 XESKI_MOD_VERSION := XesKiOS-$(ANDROID_VERSION)-$(shell date +%Y%m%d)-$(XESKI_VER)
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    BUILD_DISPLAY_ID=$(BUILD_ID)
+    BUILD_DISPLAY_ID=$(BUILD_ID) \
+    ro.xeski.version=$(XESKI_VERSION_NUMBER)-$(XESKI_VER)
 
 $(call inherit-product-if-exists, vendor/extra/product.mk)
